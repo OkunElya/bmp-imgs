@@ -13,7 +13,7 @@ int main()
 	};
 	int height = 256;
 	int width = 256;
-	std::uint32_t size =   (height * width * 4);
+	std::uint32_t size =   (height * (width+(width%4)) * 4);
 	std::vector<std::vector<S>> data;
 	for (int i = 0; i < height;i++) {
 		std::vector<S> buf;
